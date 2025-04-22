@@ -31,6 +31,15 @@ public class Pilha{
             System.out.println("A pilha não está vazia");
         }
     }
+    public boolean estaVazia2(){
+        if(topo < 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public void limpar(){
         topo = -1;
     }

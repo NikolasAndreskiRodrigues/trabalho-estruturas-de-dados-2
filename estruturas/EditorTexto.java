@@ -1,26 +1,35 @@
 package estruturas;
 
-public class EditorTexto 
-{
-    Pilha desfazer = new Pilha();
-    Pilha refazer = new Pilha();
-    String[] textoAtual = new String[10];
+public class EditorTexto {
+    private Pilha pilhaDesfazer = new Pilha();
+    private Pilha pilhaRefazer = new Pilha();
+    private String textoAtual = "";
 
-    
-    public void inserirTexto(String texto){
-        desfazer.empilhar(texto);
-        refazer.limpar();
-        textoAtual[-1] = texto;
+    public void inserirTexto(String texto) {
+        pilhaDesfazer.empilhar(textoAtual); 
+        pilhaRefazer.limpar(); 
+        textoAtual = texto; 
     }
-    public void desfazer(){
-        refazer.empilhar(desfazer.desempilhar());
-        textoAtual[-1] = null;
-    }
-    public void refazer(){
-        desfazer.empilhar(refazer.desempilhar());
-        textoAtual[-1] = refazer.desempilhar();
-    }
-    
 
+    public void desfazer() {
+        if (pilhaDesfazer.estaVazia2()) {
+            System.out.println("Nada para desfazer.");
+            return;
+        }
+        pilhaRefazer.empilhar(textoAtual); 
+        textoAtual = pilhaDesfazer.desempilhar(); 
+    }
 
+    public void refazer() {
+        if (pilhaRefazer.estaVazia2()) {
+            System.out.println("Nada para refazer.");
+            return;
+        }
+        pilhaDesfazer.empilhar(textoAtual); 
+        textoAtual = pilhaRefazer.desempilhar(); 
+    }
+
+    public String getTextoAtual() {
+        return textoAtual;
+    }
 }

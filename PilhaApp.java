@@ -1,3 +1,4 @@
+import estruturas.EditorTexto;
 import estruturas.Pilha;
 
 public class PilhaApp 
@@ -12,7 +13,14 @@ public class PilhaApp
         pilha.empilhar("Texto5");
         pilha.empilhar("Texto6");
         pilha.desempilhar();
-        pilha.estaVazia();
+        pilha.estaVazia();  
+
+        EditorTexto editor = new EditorTexto();
+        editor.inserirTexto("Texto 7");
+        editor.inserirTexto("Texto 8"); 
+        editor.desfazer();
+        editor.refazer();
+
 
         
     }
