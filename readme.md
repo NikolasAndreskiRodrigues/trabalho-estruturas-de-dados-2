@@ -20,13 +20,13 @@ verificar se a pilha está vazia - Feito
 
 Usamos duas pilhas:
 
-pilhaDesfazer: armazena os estados anteriores do texto
+pilhaDesfazer: armazena os estados anteriores do texto - Feito
 
-pilhaRefazer: armazena os estados futuros do texto
+pilhaRefazer: armazena os estados futuros do texto - Feito
 
 Principais operações:
 
-inserirTexto: 
+inserirTexto: - Feito 
 
 Salva o estado atual na pilha de desfazer
 
@@ -34,13 +34,13 @@ Limpa a pilha de refazer (já que uma nova ação foi realizada)
 
 Adiciona o novo texto
 
-desfazer: 
+desfazer: - Feito
 
 Salva o estado atual na pilha de refazer
 
 Restaura o estado anterior da pilha de desfazer
 
-refazer: 
+refazer: Feito
 
 Salva o estado atual na pilha de desfazer
 
@@ -70,11 +70,11 @@ O sistema mantém um histórico limitado (dependendo da capacidade da pilha)
 
 03) Implementar a estrutura da Fila, devendo possuir os seguintes métodos:
 
-Inserir no final (enfileirar)
+Inserir no final (enfileirar) - Feito
 
-Remover do início (desenfileirar)
+Remover do início (desenfileirar) - Feito
 
-Verificar se a fila está vazia
+Verificar se a fila está vazia - Feito
 
  
 04) A partir da implementação da fila, implemente um algoritmo de fila de impressão, onde os documentos são enfileirados e processados na ordem em que chegam, que funciona da seguinte forma:
