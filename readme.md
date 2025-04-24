@@ -79,7 +79,7 @@ Verificar se a fila está vazia - Feito
  
 04) A partir da implementação da fila, implemente um algoritmo de fila de impressão, onde os documentos são enfileirados e processados na ordem em que chegam, que funciona da seguinte forma:
 
-Deve possuir uma classe Documento
+Deve possuir uma classe Document - Feito
 
 Esta classe deve ser implementada por você e possuir o nome e o tamanho
 
@@ -87,16 +87,16 @@ O número de documentos na fila
 
 Principais operações:
 
-adicionarDocumento
+adicionarDocumento - Feito
 
-imprimirProximo
+imprimirProximo - Feito
 
-mostrarFila
+mostrarFila - Feito
 
 O método main deve demonstrar o uso com um exemplo prático:
 
-Adiciona documentos na fila
+Adiciona documentos na fila - Feito
 
-Imprime os documentos
+Imprime os documentos - Feito
 
-Mostra a fila
+Mostra a fila - Feito

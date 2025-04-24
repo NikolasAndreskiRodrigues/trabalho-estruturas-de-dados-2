@@ -1,5 +1,7 @@
+import estruturas.Documentos;
 import estruturas.EditorDeTexto;
 import estruturas.Fila;
+import estruturas.FilaImpressao;
 import estruturas.Pilha;
 
 public class PilhaApp 
@@ -29,7 +31,7 @@ public class PilhaApp
         editor.desfazer();
         editor.desfazer();
         editor.desfazer();
-        editor.desfazer();
+        editor.mostrarTexto();
         Fila fila = new Fila();
         fila.enfileirar("1");
         fila.enfileirar("2");
@@ -40,7 +42,14 @@ public class PilhaApp
         fila.estaVazia();
         fila.desenfileirar();
         fila.imprimirFila();
-        fila.desenfileirar();
         fila.estaVazia();
+        FilaImpressao filadeimpressao = new FilaImpressao(5);
+        filadeimpressao.adicionarDocumento(new Documentos("agendadokaue.pdf", 1500));
+        filadeimpressao.adicionarDocumento(new Documentos("tccdogabriel.docx", 80000));
+        filadeimpressao.adicionarDocumento(new Documentos("fotodosorriso.png", 350));
+        filadeimpressao.mostrarFila();
+        filadeimpressao.imprimirProximo();
+        filadeimpressao.imprimirProximo();
+        filadeimpressao.mostrarFila();
     }
 }
